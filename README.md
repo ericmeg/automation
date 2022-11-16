@@ -1,6 +1,7 @@
 Formation autodidacte: Gestion automatisée de conteneurs docker
 
 Prérequis:
+
 -Un laptop avec minimum 8Go de RAM
 
 -Connaitre les commandes de navigation basiques sur linux
