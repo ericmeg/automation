@@ -19,10 +19,25 @@ case "$1" in
 "--create")
 echo ""
 	echo " notre option est $1"
+	echo ""
+
+	#choix nombre de conteneur
+	nombre_machine=1
+	[ "$2" != "" ] && nombre_machine=$2
+
+	#creation conteneur
+	for i in $(seq 1 $nombre_machine);do
+		docker run -tid --name $USER-alpine-$i alpine:latest
+	done
+	echo "${nombre_machine} machine(s) crée(s)"
+	echo "$USER-alpine-$i crée(s)"
 ;;
 "--drop")
 echo ""
-	echo " notre option est $1"
+	echo " suppression du/des conteneur(s)"
+echo ""
+	docker rm -f $(docker ps -a | grep $USER-alpine |awk '{print $1}')
+
 ;;
 "--start")
 echo ""
