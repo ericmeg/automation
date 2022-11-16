@@ -1,4 +1,4 @@
-Formation en autodidacte: Gestion automatisée de conteneurs docker
+Formation autodidacte: Gestion automatisée de conteneurs docker
 
 Prérequis:
 -Un laptop avec minimum 8Go de RAM
@@ -20,5 +20,5 @@ le vagrantfile contient un fichier Install_docker.sh qui permet d'installer dock
 Le script deploy.sh permet d'automatiser la gestion des conteneurs(création, suppression, démarrage, monitoring,...)
 
 
-Cette automaformation est inspirée des blogs: https://xavki.blog/ & https://www.christophe-casalegno.com/ qui propose des contenus français que je trouve intéressant.
+Cette autoformation est inspirée des blogs: https://xavki.blog/ & https://www.christophe-casalegno.com/ qui proposent des contenus français que je trouve intéressant.
  
