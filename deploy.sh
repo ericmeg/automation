@@ -27,16 +27,16 @@ echo ""
 
 	#creation conteneur
 	for i in $(seq 1 $nombre_machine);do
-		docker run -tid --name $USER-alpine-$i alpine:latest
+		docker run -tid --name $USER-tomcat-$i tomcat:latest
 	done
 	echo "${nombre_machine} machine(s) crée(s)"
-	echo "$USER-alpine-$i crée(s)"
+	echo "$USER-tomcat-$i crée(s)"
 ;;
 "--drop")
 echo ""
 	echo " suppression du/des conteneur(s)"
 echo ""
-	docker rm -f $(docker ps -a | grep $USER-alpine |awk '{print $1}')
+	docker rm -f $(docker ps -a | grep $USER-tomcat |awk '{print $1}')
 
 ;;
 "--start")
