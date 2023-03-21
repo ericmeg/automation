@@ -5,6 +5,7 @@ function usage() {
   echo ""
   echo "Options:"
   echo "--create <nombre>              Créer le nombre spécifié de conteneurs Docker Tomcat avec un nom unique pour chacun."
+  echo "--execute <nombre>             Exécuter le nombre spécifié de conteneurs Docker Tomcat avec un nom unique pour chacun."
   echo "--drop <nom> [nom ...]         Supprimer un ou plusieurs conteneurs Docker à partir de leur nom."
   echo "--start <nom> [nom ...]        Démarrer un ou plusieurs conteneurs Docker à partir de leur nom."
   echo "--infos                        Afficher les informations sur les options disponibles."
@@ -37,6 +38,20 @@ function create_docker_containers() {
   done
 }
 
+function execute_docker_containers() {
+        #choix numero de conteneur
+        numero_machine=1
+        [ "$2" != "" ] && numero_machine=$2
+
+        #creation conteneur
+        for i in $(seq 1 $numero_machine);do
+                docker exec -ti $(docker ps -a | grep $USER-tomcat-$i |awk '{print $1}') bash
+        done
+        echo "${numero_machine} machine(s) exécutée(s)"
+        echo "$USER-tomcat-$i running"
+}
+
+
 function drop_docker_containers() {
   if [ "$#" -eq 0 ]; then
     echo "Au moins un nom de conteneur doit être spécifié."
@@ -64,6 +79,7 @@ function show_info() {
   echo "--create <nombre>          Créer le nombre spécifié de conteneurs Docker Tomcat avec un nom unique pour chacun."
   echo "--drop <nom> [nom ...]     Supprimer un ou plusieurs conteneurs Docker à partir de leur nom."
   echo "--start <nom> [nom ...]    Démarrer un ou plusieurs conteneurs Docker à partir de leur nom."
+  echo "--execute <nombre>         Exécute le nombre spécifié de conteneurs Docker Tomcat à partir de leur nom spécifique."
   echo "--infos                    Afficher les informations sur les options disponibles."
   exit 1
 }
@@ -88,6 +104,9 @@ do
     --start)
       shift
       start_docker_containers "$@"
+      ;;
+    --execute)
+      execute_docker_containers "$2"
       ;;
     --infos)
       show_info
