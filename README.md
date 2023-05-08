@@ -1,14 +1,14 @@
-# **Formation autodidacte** #: **Gestion automatisée de conteneurs docker**
+# **Formation autodidacte** : **Automatisation Gestion de conteneurs docker**
 
-## Prérequis ##:
+## Prérequis:
 
--Un laptop avec minimum 8Go de RAM
+.Un laptop avec minimum 8Go de RAM
 
--Connaitre les commandes de navigation basiques sur linux
+.Connaitre les commandes de navigation basiques sur linux
 
--Une vue globale de ce que sont VAGRANT,DOCKER et ANSIBLE (je vous recomande [le blog de xavki](https://xavki.blog/))
+.Une vue globale de ce que sont VAGRANT,DOCKER et ANSIBLE (je vous recomande [le blog de xavki](https://xavki.blog/))
 
-## **STEPS** ##:
+## **STEPS** :
 
 1. Création node linux : Infrastrure As Code 
 
