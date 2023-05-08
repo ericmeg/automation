@@ -2,11 +2,11 @@
 
 ## Prérequis:
 
-.Un laptop avec minimum 8Go de RAM
+* Un laptop avec minimum 8Go de RAM
 
-.Connaitre les commandes de navigation basiques sur linux
+* Connaitre les commandes de navigation basiques sur linux
 
-.Une vue globale de ce que sont VAGRANT,DOCKER et ANSIBLE (je vous recomande [le blog de xavki](https://xavki.blog/))
+* Une vue globale de ce que sont VAGRANT,DOCKER et ANSIBLE (je vous recomande [le blog de xavki](https://xavki.blog/))
 
 ## **STEPS** :
 
