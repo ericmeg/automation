@@ -8,7 +8,7 @@
 
 -Une vue globale de ce que sont VAGRANT,DOCKER et ANSIBLE (je vous recomande [le blog de xavki](https://xavki.blog/))
 
-##**STEPS**##:
+## **STEPS** ##:
 
 1. Création node linux : Infrastrure As Code 
 
@@ -21,5 +21,5 @@ le vagrantfile contient un fichier Install_docker.sh qui permet d'installer dock
 Le script deploy2.sh permet d'automatiser la gestion des conteneurs(création, suppression, démarrage, monitoring,[work in progress...)
 
 
-Cette autoformation est une adaptation provenant  du [blog de xavki] (https://xavki.blog/) & ce celui de [Christophe Casalegno] (https://www.christophe-casalegno.com/) qui proposent des contenus français que je trouve intéressant :)
+Cette autoformation est une adaptation provenant du [blog de xavki](https://xavki.blog/) & ce celui de [Christophe Casalegno](https://www.christophe-casalegno.com/) qui proposent des contenus français que je trouve intéressant :)
  
